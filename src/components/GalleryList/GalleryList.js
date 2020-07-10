@@ -9,9 +9,9 @@ class GalleryList extends Component {
   render() {
     return (
       <div>
-          <h1>Gallery of my life</h1>
+          <h1>Gallery of Joel's life</h1>
           <ul>
-          { this.props.galleryItems.map( ( item, index )=><GalleryItem thisItem={ item } key={ index }/>)}
+          { this.props.galleryItems.map( ( item, index )=><GalleryItem taco={ item } key={ index }/>)}
         </ul>
       </div>
     );

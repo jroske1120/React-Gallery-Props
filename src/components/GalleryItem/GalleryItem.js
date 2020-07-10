@@ -9,7 +9,7 @@ class GalleryItem extends Component {
     return (
       <div>
        <li>
-         <p>{ this.props.thisItem}</p>
+         <p><img src={ this.props.taco.path} width="100px" alt={this.props.taco.description}/></p>
        </li>
       </div>
     );
