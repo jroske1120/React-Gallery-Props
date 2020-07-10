@@ -18,11 +18,12 @@ class GalleryItem extends Component {
   render() {
     return (
       <div>
-        <li onClick={this.toggleDetails}>
+        <li>
           {(this.state.details ?
-            <p><img src={this.props.taco.path} width="100px" alt={this.props.taco.description} /></p>
-            : <p>{this.props.taco.description}</p>
+            <p onClick={this.toggleDetails}><img src={this.props.taco.path} width="100px" alt={this.props.taco.description} /></p>
+            : <p onClick={this.toggleDetails}>{this.props.taco.description}</p>
          )}
+         <button>Like This Photo!</button>Likes:  {this.props.taco.likes}
         </li>
       </div>
     );

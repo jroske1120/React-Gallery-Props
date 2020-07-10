@@ -28,6 +28,20 @@ class App extends Component {
     })
   }
 
+  //PUT function to increment likes
+  putGalleryLikes() {
+    Axios({
+      method: 'PUT',
+      url: '/likes'
+    }).then((response)=>{
+      console.log('back from PUT:', response.data);
+      
+    }).catch((error)=>{
+      console.log(error);
+      alert('Put no worky werk');
+    })
+  }//end putGalleryLikes
+
   render() {
     return (
       <div className="App">
