@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-// import './App.css';
+import './App.css';
+
 import Axios from 'axios';
 import GalleryList from '../GalleryList/GalleryList';
 import GalleryForm from '../GalleryForm/GalleryForm';
@@ -44,8 +45,8 @@ class App extends Component {
     })
   }//end putGalleryLikes
 
-deletePic = (id) => {
-  console.log('in deletePic');
+  deletePic = (id) => {
+    console.log('in deletePic');
     Axios({
       method: 'DELETE',
       url: `/gallery/${id}`
@@ -56,31 +57,29 @@ deletePic = (id) => {
       console.log(error);
       alert('DELETE no worky werk');
     })
-}
+  }
 
   //function to add pic via form
-  addSong = (songToAdd) => {
-    console.log('Adding song', songToAdd);
+  addPhoto = (addedPhoto) => {
+    console.log('Adding song', addedPhoto);
     //Send it to the server
     Axios({
       method: 'POST',
       url: '/gallery',
-      data: songToAdd
+      data: addedPhoto
     })
-      .then( (response) => {
+      .then((response) => {
         this.getGalleryItems();
       })
-      .catch( (error) => {
-        console.log( 'Error adding songs', error);
+      .catch((error) => {
+        console.log('Error adding songs', error);
       })
   }//end add POST
 
   render() {
     return (
       <div className="App">
-        {/* <img src="images/goat_small.jpg" /> */}
-        <GalleryForm addSong={this.addSong} />
-
+        <GalleryForm addPhoto={this.addPhoto} />
         <GalleryList delete={this.deletePic} like={this.putGalleryLikes} galleryItems={this.state.galleryItems} />
       </div>
     );

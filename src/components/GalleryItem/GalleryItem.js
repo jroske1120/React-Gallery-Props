@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import Button from '@material-ui/core/Button';
+import ListItem from '@material-ui/core/ListItem';
+import List from '@material-ui/core/List';
 
 class GalleryItem extends Component {
   state = {
@@ -17,17 +20,20 @@ class GalleryItem extends Component {
 
   render() {
     return (
-      <div>
-        <li>
+      <List>
+        <ListItem>
           {(this.state.details ?
             <p onClick={this.toggleDetails}>{this.props.photo.description}</p>
-            : <p onClick={this.toggleDetails}><img src={this.props.photo.path} width="100px" alt={this.props.photo.description} /></p>
-         )}
-         <button onClick={() => this.props.like(this.props.photo.id)}>Like This Photo!</button>
-         Likes:  {this.props.photo.likes}
-         <button onClick={() => this.props.delete(this.props.photo.id)}>Remove This Photo</button>
-        </li>
-      </div>
+            : <p onClick={this.toggleDetails}><img src={this.props.photo.path} width="250px" alt={this.props.photo.description} /></p>
+          )} </ListItem>
+        <ListItem>
+          <Button onClick={() => this.props.like(this.props.photo.id)}>Like This Photo!</Button>
+            Likes:  {this.props.photo.likes}
+        </ListItem>
+        <ListItem>
+          <Button onClick={() => this.props.delete(this.props.photo.id)}>Remove This Photo</Button>
+        </ListItem>
+      </List>
     );
   }
 }
