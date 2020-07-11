@@ -35,7 +35,7 @@ class App extends Component {
       method: 'PUT',
       url: `/gallery/like/${id}`
     }).then((response) => {
-      console.log('back from PUT:', response, id);
+      console.log('back from PUT:', response);
       this.getGalleryItems();
     }).catch((error) => {
       console.log(error);

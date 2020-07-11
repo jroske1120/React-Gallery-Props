@@ -8,14 +8,14 @@ const pool = require('../modules/pool');
 
 // PUT Route
 router.put('/like/:id', (req, res) => {
-    console.log(req.params);
-    const galleryId = req.params.id;
-    for (const galleryItem of galleryItems) {
-        if (galleryItem.id == galleryId) {
-            galleryItem.likes += 1;
-        }
-    }
-    res.sendStatus(200);
+    console.log('req.prams.id is:',req.params.id);
+    let queryString = `UPDATE galleryItems SET likes = likes+1 WHERE id = $1;`;
+    pool.query(queryString, [req.params.id]).then((result)=>{
+        res.send(result.rows);
+    }).catch((err)=>{
+        console.log(err);
+        res.sendStatus(500);
+    })
 }); // END PUT Route
 
 // GET Route
