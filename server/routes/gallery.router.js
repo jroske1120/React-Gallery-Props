@@ -28,4 +28,21 @@ router.get('/', (req, res) => {
     })
 }); // END GET Route
 
+// Setup a POST route to add a new song to the database
+router.post('/', (req, res) => {
+    const queryString = `INSERT INTO galleryItems ( path, description) VALUES 
+    ($1, $2);`;
+    // Let sql sanitize your inputs (NO Bobby Drop Tables here!)
+    // the $1, $2, etc get substituted with the values from the array below
+    pool.query(queryString, [req.body.path, req.body.description])
+        .then((result) => {
+            console.log(`Added song to the database`, req.body.path);
+            res.sendStatus(201);
+        })
+        .catch((error) => {
+            console.log(`Error making database query ${queryString}`, error);
+            res.sendStatus(500); // Good server always responds
+        })
+})
+
 module.exports = router;
