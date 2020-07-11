@@ -44,6 +44,20 @@ class App extends Component {
     })
   }//end putGalleryLikes
 
+deletePic = (id) => {
+  console.log('in deletePic');
+    Axios({
+      method: 'DELETE',
+      url: `/gallery/${id}`
+    }).then((response) => {
+      console.log('back from DELETE:', response);
+      this.getGalleryItems();
+    }).catch((error) => {
+      console.log(error);
+      alert('DELETE no worky werk');
+    })
+}
+
   //function to add pic via form
   addSong = (songToAdd) => {
     console.log('Adding song', songToAdd);
@@ -67,7 +81,7 @@ class App extends Component {
         {/* <img src="images/goat_small.jpg" /> */}
         <GalleryForm addSong={this.addSong} />
 
-        <GalleryList like={this.putGalleryLikes} galleryItems={this.state.galleryItems} />
+        <GalleryList delete={this.deletePic} like={this.putGalleryLikes} galleryItems={this.state.galleryItems} />
       </div>
     );
   }

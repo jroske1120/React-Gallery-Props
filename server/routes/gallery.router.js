@@ -45,4 +45,19 @@ router.post('/', (req, res) => {
         })
 })
 
+//Delete
+router.delete('/:id', (req, res) => {
+    console.log('Delete request for id', req.params.id);
+    let queryString = 'DELETE FROM galleryItems WHERE id=$1;';
+    pool.query(queryString, [req.params.id])
+        .then((result) => {
+            console.log('pic deleted');
+            res.sendStatus(200);
+        })
+        .catch((error) => {
+            console.log(`Error making database query ${queryString}`, error);
+            res.sendStatus(500); // Good server always responds
+        })
+})
+
 module.exports = router;
