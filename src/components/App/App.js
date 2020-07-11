@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 // import './App.css';
 import Axios from 'axios';
 import GalleryList from '../GalleryList/GalleryList';
+import GalleryForm from '../GalleryForm/GalleryForm';
 
 class App extends Component {
   state = {
@@ -43,10 +44,29 @@ class App extends Component {
     })
   }//end putGalleryLikes
 
+  //function to add pic via form
+  addSong = (songToAdd) => {
+    console.log('Adding song', songToAdd);
+    //Send it to the server
+    Axios({
+      method: 'POST',
+      url: '/gallery',
+      data: songToAdd
+    })
+      .then( (response) => {
+        this.getGalleryItems();
+      })
+      .catch( (error) => {
+        console.log( 'Error adding songs', error);
+      })
+  }//end add POST
+
   render() {
     return (
       <div className="App">
         {/* <img src="images/goat_small.jpg" /> */}
+        <GalleryForm addSong={this.addSong} />
+
         <GalleryList like={this.putGalleryLikes} galleryItems={this.state.galleryItems} />
       </div>
     );
