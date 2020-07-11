@@ -23,7 +23,8 @@ class GalleryItem extends Component {
             <p onClick={this.toggleDetails}><img src={this.props.taco.path} width="100px" alt={this.props.taco.description} /></p>
             : <p onClick={this.toggleDetails}>{this.props.taco.description}</p>
          )}
-         <button>Like This Photo!</button>Likes:  {this.props.taco.likes}
+         <button onClick={() => this.props.like(this.props.taco.id)}>Like This Photo!</button>
+         Likes:  {this.props.taco.likes}
         </li>
       </div>
     );

@@ -11,7 +11,8 @@ class GalleryList extends Component {
       <div>
           <h1>Gallery of Joel's life</h1>
           <ul>
-          { this.props.galleryItems.map( ( item, index )=><GalleryItem taco={ item } key={ index }/>)}
+          { this.props.galleryItems.map( ( item, index )=>
+          <GalleryItem taco={ item } id={this.props.id} like={this.props.like} key={ index }/>)}
         </ul>
       </div>
     );
