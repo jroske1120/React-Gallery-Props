@@ -6,8 +6,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 class GalleryForm extends Component {
   useStyles = makeStyles((theme) => ({
-    root: {
-    }
+    
   }));
 
   state = {
@@ -41,7 +40,6 @@ class GalleryForm extends Component {
   render() {
     return (
       <div>
-        <h2>Add a Pic</h2>
         <form>
           {/* input value={this.state.pic.path} and value={this.state.pic.description}  */}
           <Input className={this.useStyles.root} placeholder='URL'
@@ -54,7 +52,7 @@ class GalleryForm extends Component {
           <Button
             variant="contained"
             color="primary"
-            onClick={this.handleSubmit}>Add</Button>
+            onClick={this.handleSubmit}>Add to the collection</Button>
         </form>
       </div>
     );

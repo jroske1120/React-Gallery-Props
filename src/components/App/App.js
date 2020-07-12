@@ -86,6 +86,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+      {<h1 class="header">Gallery of Joel's life</h1>}
+
         <GalleryForm addPhoto={this.addPhoto} />
         <GalleryList delete={this.deletePic} like={this.putGalleryLikes} galleryItems={this.state.galleryItems} />
       </div>

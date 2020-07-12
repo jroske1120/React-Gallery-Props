@@ -15,3 +15,6 @@ SELECT * FROM galleryItems;
 
 -- used on PUT function that increments likes on a click
 UPDATE galleryItems SET likes = likes+1 WHERE id = $1;
+
+--delete request
+DELETE FROM galleryItems WHERE id=$1;

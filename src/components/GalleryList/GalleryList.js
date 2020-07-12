@@ -9,7 +9,6 @@ class GalleryList extends Component {
   render() {
     return (
       <div>
-        <h1>Gallery of Joel's life</h1>
           {this.props.galleryItems.map((item, index) =>
             <GalleryItem photo={item} id={this.props.id} delete={this.props.delete} like={this.props.like} key={index} />)}
        

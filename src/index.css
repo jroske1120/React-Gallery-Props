@@ -8,13 +8,26 @@ body {
   background-attachment: fixed;
   background-size: cover;
 }
-p {
-  margin: 0
+h2{
+  margin: 0;
+  color: rgba(228, 243, 250, 0.911);
+  text-shadow: 2px 2px 4px #000000;
 }
-
+.header{
+  margin: 0;
+  color: rgba(228, 243, 250, 0.911);
+  text-shadow: 2px 2px 4px #000000;
+  font-size: 40px;
+}
+h1 {
+  margin: 0;
+}
 .MuiButtonGroup-root {
   margin-bottom: 8rem;
-  padding: 0px 25px;
+}
+.space-span {
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .MuiInputBase-root {
