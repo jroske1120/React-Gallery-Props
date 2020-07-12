@@ -16,11 +16,16 @@ INSERT INTO galleryItems ( path, description) VALUES
  ('images/SHT.jpg', 'In the summer of 2018 my friend, Brian, and I hiked the entirety of the Superior Hiking Trail, from Duluth up to Canada.'),
  ('images/IMG_20181230_175548.jpg', 'Photo of my family and significant others in Cuenca, Ecuador. My sister lived in Ecuador for two years and we finally got to visit her for the holidays in 2018.'),
  ('images/Mawwage.jpg', 'Photo of my wife, Anais, and I on our wedding day. We were married in August, 2019.');
---used on the GET function
-SELECT * FROM galleryItems;
+
+--after file images are in, the POST query is the following:
+ INSERT INTO galleryItems ( path, description) 
+ VALUES ($1, $2);
+
+--used on the GET function, most recently added on top
+SELECT * FROM galleryItems ORDER BY "id" DESC;;
 
 -- used on PUT function that increments likes on a click
 UPDATE galleryItems SET likes = likes+1 WHERE id = $1;
 
---delete request
+--DELETE request
 DELETE FROM galleryItems WHERE id=$1;
