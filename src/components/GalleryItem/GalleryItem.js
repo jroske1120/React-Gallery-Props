@@ -53,14 +53,14 @@ class GalleryItem extends Component {
               <span className="space-span"></span>
               <img src="https://i.ya-webdesign.com/images/first-clipart-in-line-5.png"
                alt="like btn" height="40px"/>
-               <span className="space-span"></span>
+               {/* <span className="space-span"></span> */}
               </Button>
             <Button
               color="secondary"
               onClick={() =>
                 this.props.delete(this.props.photo.id)}>
-              <img src="https://lh3.googleusercontent.com/proxy/-OKWRS3ZBAmMfxyy7Qhsq-_sCKMtHDBby8en_Ol-VuSXIUOH5MVs18D931K7gcAVXxQ36F-_lQG08cu-0cfositnfFe2xWXS7XX5OH31QyH_sy9hpjVAGjGpnHZaWmxGvczl"
-               alt="delete btn" height="30px"/> </Button>
+              <img src="https://i.ya-webdesign.com/images/delete-icon-png-4.png"
+                alt="delete btn" height="30px"/> </Button>
           </ButtonGroup>
         </Grid>
       </div>

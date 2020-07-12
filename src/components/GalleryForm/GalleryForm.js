@@ -42,10 +42,14 @@ class GalleryForm extends Component {
       <div>
         <form>
           {/* input value={this.state.pic.path} and value={this.state.pic.description}  */}
-          <Input className={this.useStyles.root} placeholder='URL'
+          <Input className={this.useStyles.root} 
+          placeholder='URL'
+          value={this.state.pic.path}
             onChange={(event) => this.handleChangeFor(event, 'path')} />
           <br></br>
-          <Input className={this.useStyles.root} placeholder='Description'
+          <Input className={this.useStyles.root} 
+          placeholder='Description'
+          value={this.state.pic.description}
             onChange={(event) => this.handleChangeFor(event, 'description')} />
           <br></br>
           <br></br>
