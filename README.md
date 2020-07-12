@@ -15,7 +15,7 @@ This is Joel Roske's full stack React App.
 
 - [Node.js](https://nodejs.org/en/)
 - [Postgres](https://www.postgresql.org/download/)
-- [https://material-ui.com/](https://material-ui.com/)
+- [Material UI](https://material-ui.com/)
 
 ## Installation
 
