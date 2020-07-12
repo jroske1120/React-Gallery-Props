@@ -46,7 +46,7 @@ class GalleryItem extends Component {
               {this.props.photo.description}</p>
             : <p onClick={this.toggleDetails}>
               <img className="img-in"
-                src={this.props.photo.path} width="80%"
+                src={this.props.photo.path}
                 alt={this.props.photo.description} /></p>
           )}
           {/* MUI's Button setup for primary and secondary btns.
