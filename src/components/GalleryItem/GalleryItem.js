@@ -30,7 +30,7 @@ class GalleryItem extends Component {
 
   render() {
     return (
-      <div class="btn-div-space">
+      <div>
         <Grid className={this.useStyles.root}
           container direction="column"
           justify="center"
@@ -40,7 +40,7 @@ class GalleryItem extends Component {
             <p className="descr-p" onClick={this.toggleDetails}>
               {this.props.photo.description}</p>
             : <p onClick={this.toggleDetails}>
-              <img src={this.props.photo.path} width="400px"
+              <img src={this.props.photo.path} width="80%"
                 alt={this.props.photo.description} /></p>
           )}
           <ButtonGroup 

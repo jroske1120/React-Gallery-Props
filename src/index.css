@@ -40,10 +40,12 @@ h1 {
   padding-right: 10px;
 }
 .MuiInputBase-root {
-  width: 250px;
+  width: 60%;
 }
 .descr-p {
-width: 300px;
+/* width: 300px; */
+margin-left: 0mm;
+margin-right: 0mm;
 font-size: 35px;
 color: rgba(228, 243, 250, 0.911);
 text-shadow: 4px 4px 4px #000000;
