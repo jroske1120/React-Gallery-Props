@@ -9,7 +9,7 @@ This is Joel Roske's full stack React App.
 
 ## Screen Shot
 
-![Joel Roske React Gallery](React Gallery.png)
+![Joel Roske React Gallery](React-gallery.png)
 
 ### Prerequisites
 
