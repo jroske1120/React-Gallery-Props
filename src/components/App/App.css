@@ -1,12 +1,13 @@
 .App {
   text-align: center;
+  display: table;
+  margin: 0px auto 0px auto; 
+  padding:15px;
+  /* background-image: linear-gradient(rgba(168,201,252, 0.45), rgba(168,201,252, 0.45)) ; */
 }
 
 .App-header {
-  background-color: #222;
-  height: 70px;
-  padding: 20px;
-  color: white;
+  background-color: rgb(247, 242, 242);
 }
 
 .App-title {

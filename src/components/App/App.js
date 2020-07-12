@@ -47,16 +47,23 @@ class App extends Component {
 
   deletePic = (id) => {
     console.log('in deletePic');
-    Axios({
-      method: 'DELETE',
-      url: `/gallery/${id}`
-    }).then((response) => {
-      console.log('back from DELETE:', response);
-      this.getGalleryItems();
-    }).catch((error) => {
-      console.log(error);
-      alert('DELETE no worky werk');
-    })
+    let theyAreSure = window.confirm(
+      "Are you sure you want to remove this picture?"
+    );
+    if (theyAreSure) {
+      Axios({
+        method: 'DELETE',
+        url: `/gallery/${id}`
+      }).then((response) => {
+        console.log('back from DELETE:', response);
+        this.getGalleryItems();
+      }).catch((error) => {
+        console.log(error);
+        alert('DELETE no worky werk');
+      });
+    } else {
+      console.log('Reconsidered');
+    }
   }
 
   //function to add pic via form
