@@ -1,13 +1,9 @@
 import React, { Component } from 'react';
 import Button from '@material-ui/core/Button';
 import Input from '@material-ui/core/Input';
-import { makeStyles } from '@material-ui/core/styles';
 
 
 class GalleryForm extends Component {
-  useStyles = makeStyles((theme) => ({
-    
-  }));
 
   state = {
     pic: {
@@ -16,6 +12,7 @@ class GalleryForm extends Component {
     }
   }
 
+  //target property values
   handleChangeFor = (event, propertyName) => {
     this.setState({
       pic: {
@@ -41,22 +38,26 @@ class GalleryForm extends Component {
     return (
       <div>
         <form>
-          {/* input value={this.state.pic.path} and value={this.state.pic.description}  */}
-          <Input className={this.useStyles.root} 
-          placeholder='URL'
-          value={this.state.pic.path}
-            onChange={(event) => this.handleChangeFor(event, 'path')} />
+          {/* MUI's input and Button styles  */}
+          <Input
+            placeholder='URL'
+            value={this.state.pic.path}
+            onChange={(event) =>
+              this.handleChangeFor(event, 'path')} />
           <br></br>
-          <Input className={this.useStyles.root} 
-          placeholder='Description'
-          value={this.state.pic.description}
-            onChange={(event) => this.handleChangeFor(event, 'description')} />
+          <Input
+            placeholder='Description'
+            value={this.state.pic.description}
+            onChange={(event) =>
+              this.handleChangeFor(event, 'description')} />
+          {/* breaks to separate inputs and button */}
           <br></br>
           <br></br>
           <Button
             variant="contained"
             color="primary"
-            onClick={this.handleSubmit}>Add to the collection</Button>
+            onClick={this.handleSubmit}>
+            Add to the collection</Button>
         </form>
       </div>
     );

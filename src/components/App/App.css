@@ -1,8 +1,9 @@
+/* centers Grid elements */
 .App {
   text-align: center;
   display: table;
   margin: 0px auto 0px auto; 
-  padding: 2% 10% 0% 10%;
+  padding: 5% 2% 0% 2%;
 }
 
 @keyframes App-logo-spin {

@@ -1,3 +1,4 @@
+/* background image that's set behind images */
 body {
   margin: 0;
   padding: 0;
@@ -8,50 +9,75 @@ body {
   background-attachment: fixed;
   background-size: cover;
 }
-h2{
-  margin: 0;
-  color: rgba(228, 243, 250, 0.911);
-  text-shadow: 2px 2px 4px #000000;
-}
+
+/* Style initial header for visibility 
+in front of background */
 .header{
   margin: 0;
   color: rgba(236, 244, 248, 0.973);
   text-shadow: 2px 2px 4px #000000;
   font-size: 60px;
 }
+
+/* Makes btns smaller */
 h1 {
   margin: 0;
 }
+
+/* A little wiggle room
+beneath the buttons */
 .MuiButtonGroup-root {
   margin-bottom: 1rem;
 }
+
+/* separate photos and add original
+transparency that changes on hover */
 .MuiGrid-root {
-  margin-bottom: 8rem;
+  margin-bottom: 5rem;
   opacity: .75;
 }
+
+/* A little wiggle room
+beneath the form */
+form {
+  margin-bottom: 3rem;
+}
+
+/* hover effects for Grid
+so it appears to focus  */
 .MuiGrid-root:hover {
-  margin-bottom: 8rem;
+  margin-bottom: 5rem;
   box-shadow: 20px 20px 40px #000000;
   border-radius: 10px;
   opacity: 1;
 }
+
+/* spacing between img and like counter */
 .space-span {
   padding-left: 10px;
   padding-right: 10px;
 }
+
+/* responsive longer input lines */
 .MuiInputBase-root {
   width: 60%;
 }
+
+/* keep description centered,
+text styling to see in front of background image */
 .descr-p {
-/* width: 300px; */
+width: 300px;
 margin-left: 0mm;
 margin-right: 0mm;
 font-size: 35px;
 color: rgba(228, 243, 250, 0.911);
 text-shadow: 4px 4px 4px #000000;
-
 }
 
-/* img {
+/* Smooth corners, add max width to preserve quality
+if on a larger screen */
+.img-in {
   border-radius: 5px;
-} */
+  max-width: 700px;
+  height: auto;
+}
