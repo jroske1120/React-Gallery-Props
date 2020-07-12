@@ -9,7 +9,7 @@ import ButtonGroup from '@material-ui/core/ButtonGroup';
 class GalleryItem extends Component {
   useStyles = makeStyles((theme) => ({
     root: {
-      textAlign: 'center',
+      // textAlign: 'center',
       color: theme.palette.text.secondary,
     },
   }));
@@ -30,14 +30,14 @@ class GalleryItem extends Component {
 
   render() {
     return (
-      <div >
+      <div class="btn-div-space">
         <Grid className={this.useStyles.root}
           container direction="column"
           justify="center"
           alignItems="center"
         >
           {(this.state.details ?
-            <p onClick={this.toggleDetails}>
+            <p className="descr-p" onClick={this.toggleDetails}>
               {this.props.photo.description}</p>
             : <p onClick={this.toggleDetails}>
               <img src={this.props.photo.path} width="400px"

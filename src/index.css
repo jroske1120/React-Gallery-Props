@@ -15,21 +15,41 @@ h2{
 }
 .header{
   margin: 0;
-  color: rgba(228, 243, 250, 0.911);
+  color: rgba(236, 244, 248, 0.973);
   text-shadow: 2px 2px 4px #000000;
-  font-size: 40px;
+  font-size: 60px;
 }
 h1 {
   margin: 0;
 }
 .MuiButtonGroup-root {
+  margin-bottom: 1rem;
+}
+.MuiGrid-root {
   margin-bottom: 8rem;
+  opacity: .75;
+}
+.MuiGrid-root:hover {
+  margin-bottom: 8rem;
+  box-shadow: 20px 20px 40px #000000;
+  border-radius: 10px;
+  opacity: 1;
 }
 .space-span {
   padding-left: 10px;
   padding-right: 10px;
 }
-
 .MuiInputBase-root {
   width: 250px;
+}
+.descr-p {
+width: 300px;
+font-size: 35px;
+color: rgba(228, 243, 250, 0.911);
+text-shadow: 4px 4px 4px #000000;
+
+}
+
+img {
+  border-radius: 5px;
 }
