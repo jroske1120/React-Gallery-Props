@@ -15,7 +15,6 @@ This is Joel Roske's full stack React App.
 
 - [Node.js](https://nodejs.org/en/)
 - [Postgres](https://www.postgresql.org/download/)
-- [Material UI](https://material-ui.com/)
 
 ## Installation
 
@@ -38,7 +37,7 @@ This is Joel Roske's full stack React App.
 
 ## Built With
 
-The full stack! React, JSX, Javascript, CSS, Axios, Node, Express, and Postgres with SQL.
+The full stack! React, JSX, Javascript, CSS, Axios, Node, Express, Material UI, and Postgres with SQL.
 
 ## Acknowledgement
 Thanks to [Prime Digital Academy](www.primeacademy.io) who equipped and helped me to make this application a reality, well as the members of my cohort, Paxos.
