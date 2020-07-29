@@ -1,7 +1,7 @@
 -- create table 
 CREATE TABLE galleryItems (
 	id SERIAL PRIMARY KEY,
-	path varchar(300),
+	path varchar(500),
 	description varchar(300),
 	likes int not null default 0
 );
